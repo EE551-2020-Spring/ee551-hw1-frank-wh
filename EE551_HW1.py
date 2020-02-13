@@ -85,23 +85,21 @@ def dictionaries():
     #   name => {first_name => "Grace", last_name => "Hopper"} (a dictionary)
     #   jobs => ["scientist", "engineer"] (a list)
     #   age => 85
-    p = {"name": {"first_name": "Grace", "last_name": "Hopper"},
+    amazing_grace = {"name": {"first_name": "Grace", "last_name": "Hopper"},
          "jobs": ["scientist", "engineer"],
          "age": 85}
 
     # Add "programmer" to the list of jobs Grace has
     # IMPLEMENT IT HERE
-    p["jobs"] += ["programmer"]
+    amazing_grace["jobs"] += ["programmer"]
     
     # Get the third job Grace has that you recently added
-    t = p["jobs"][2]
+    p = amazing_grace["jobs"][2]
 
     # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
-    li = [i for i in "amazing_grace"]
-    li.sort()
-    k = [i for i in li]
+    k = sorted(amazing_grace.keys())
     
-    return a, f, p, t, k
+    return a, f, p, k
 
 numbers_and_strings()
 lists()
