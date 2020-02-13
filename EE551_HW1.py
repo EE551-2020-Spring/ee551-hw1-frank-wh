@@ -41,13 +41,13 @@ def lists():
     p = n.split(' ')
     
     # Get all the items past the first of the third substring
-    s = p[-1][1:]
+    r = p[-1][1:]
     
     # Create a 3 x 3 matrix as nested list such that
     #   first row is [1, 4, 5]
     #   second row is [6, 10, 11]
     #   third row is [12, 17, 38]
-    r = [[1, 4, 5], [6, 10, 11],[12, 17, 38]]
+    A = [[1, 4, 5], [6, 10, 11],[12, 17, 38]]
     
     # Collect the items in the last column of matrix A using list comprehension
     c = [i[-1] for i in r]
@@ -61,7 +61,7 @@ def lists():
     # each character of the string "Stevens" using list comprehension.
     o = [ord(i) for i in "Stevens"]
     
-    return p, s, r, c, d, o
+    return p, r, c, d, o
 
 
 def dictionaries():
@@ -97,7 +97,8 @@ def dictionaries():
     p = amazing_grace["jobs"][2]
 
     # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
-    k = sorted(amazing_grace.keys())
+    k = [key for key in amazing_grace.keys()]
+    k.sort()
     
     return a, f, p, k
 
